@@ -1,6 +1,6 @@
 // Advent of code 2019, Day 1, Part 1 & 2
 // Requires "input.txt" in same directory as executable.
-// 
+
 #include <iostream>
 #include <string>
 #include <vector>
