@@ -1,3 +1,6 @@
+// Advent of code 2019, Day 1, Part 1 & 2
+// Requires "input.txt" in same directory as executable.
+// 
 #include <iostream>
 #include <string>
 #include <vector>
@@ -14,7 +17,17 @@ int main()
 	int sumB {0};
 	int module{0};
 	
-	if (data)
+	if (data)	// Part 1
+	{
+		for(string line : inputData)
+		{
+			module = stoi(line);
+			sumB += (module / 3 - 2);
+		}
+	}
+	cout << "Part 1: " << sumB << endl;
+	
+	if (data)	//part 2
 	{
 		for(string line : inputData)
 		{
@@ -28,11 +41,10 @@ int main()
 			sumB = sumA;
 		}
 	}
-	
-	cout << sumB << endl;
+	cout << "Part 2: " << sumB << endl;
 }
 
-bool getData(string file, vector<string> & inputData)
+bool getData(string file, vector<string> & inputData) 	// Open file and store lines in vector of strings.
 {
 	string line;
 	ifstream in(file.c_str());
